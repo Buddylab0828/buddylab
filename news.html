@@ -4,8 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>뉴스 · IR — BuddyLab</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <link rel="stylesheet" href="style.css">
 <style>
 .ir-hero { padding: 140px 6% 80px; background: var(--g900); color: var(--white); }
@@ -75,8 +74,18 @@
       <a href="news.html" class="active">뉴스·IR</a>
       <a href="contact.html" class="nav-cta">문의하기</a>
     </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="메뉴">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+<a href="about.html">회사 소개</a>
+      <a href="products.html">제품·서비스</a>
+      <a href="team.html">팀</a>
+      <a href="news.html" class="active">뉴스·IR</a>
+      <a href="contact.html" class="nav-cta">문의하기</a>
+</div>
 
 <section class="ir-hero">
   <div class="ir-hero-inner">
@@ -98,13 +107,13 @@
         <div class="overview-stat-desc">광주광역시 북구</div>
       </div>
       <div class="overview-stat">
-        <div class="overview-stat-label">2025년 서비스 매출</div>
-        <div class="overview-stat-num">180백만</div>
-        <div class="overview-stat-desc">SW 개발·디자인 (8~12월)</div>
+        <div class="overview-stat-label">2025년 매출</div>
+        <div class="overview-stat-num">IR 문의</div>
+        <div class="overview-stat-desc">투자 문의 시 공개</div>
       </div>
       <div class="overview-stat">
         <div class="overview-stat-label">2026년 목표 매출</div>
-        <div class="overview-stat-num">1,000백만</div>
+        <div class="overview-stat-num">IR 문의</div>
         <div class="overview-stat-desc">펫푸드 + 디바이스 통합</div>
       </div>
       <div class="overview-stat">
@@ -200,8 +209,8 @@
       <div class="news-item">
         <div>
           <div class="news-meta"><span class="news-tag">실증</span>2025.09</div>
-          <h4>충남대학교 동물병원 B2B 실증 협약</h4>
-          <p>충남대동물병원 및 광주 쿨펫동물병원과 PAWSENSE B2B 실증 사업을 개시하였습니다.</p>
+          <h4>동물병원 B2B 실증 협약 체결</h4>
+          <p>광주 및 수도권 동물병원과 PAWSENSE B2B 실증 사업을 개시하였습니다.</p>
         </div>
         <span class="news-arrow">→</span>
       </div>
@@ -226,5 +235,21 @@
   </div>
   <div class="footer-bottom"><p>© 2025 BuddyLab Co., Ltd. All rights reserved.</p><p>광주광역시 북구</p></div>
 </footer>
+<script>
+const btn = document.getElementById("hamburger");
+const menu = document.getElementById("mobileMenu");
+if(btn && menu){
+  btn.addEventListener("click", () => {
+    btn.classList.toggle("open");
+    menu.classList.toggle("open");
+  });
+  document.querySelectorAll(".nav-mobile-menu a").forEach(a => {
+    a.addEventListener("click", () => {
+      btn.classList.remove("open");
+      menu.classList.remove("open");
+    });
+  });
+}
+</script>
 </body>
 </html>

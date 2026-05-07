@@ -4,8 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>회사 소개 — BuddyLab</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <link rel="stylesheet" href="style.css">
 <style>
 .about-hero { padding: 140px 6% 80px; background: var(--cream); }
@@ -67,8 +66,18 @@
       <a href="news.html">뉴스·IR</a>
       <a href="contact.html" class="nav-cta">문의하기</a>
     </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="메뉴">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+<a href="about.html" class="active">회사 소개</a>
+      <a href="products.html">제품·서비스</a>
+      <a href="team.html">팀</a>
+      <a href="news.html">뉴스·IR</a>
+      <a href="contact.html" class="nav-cta">문의하기</a>
+</div>
 
 <!-- HERO -->
 <section class="about-hero">
@@ -76,7 +85,7 @@
     <span class="section-label">About</span>
     <h1>반려동물 생활공간을<br>데이터 자산으로 전환합니다</h1>
     <div class="divider"></div>
-    <p>버디랩은 스마트 펫하우스 PAWSENSE와 데이터 기반 기능성 간식으로 반려동물 헬스케어의 새로운 표준을 만들어갑니다.</p>
+    <p>버디랩은 스마트 펫하우스 PAWSENSE와 데이터 기반 기능성 간식으로 반려동물 헬스케어의 새로운 기준을 만들어갑니다.</p>
   </div>
 </section>
 
@@ -137,7 +146,7 @@
         <div class="timeline-dot"></div>
         <div class="timeline-content">
           <h4>B2B 실증 본격화</h4>
-          <p>훈련소 및 동물병원 B2B 실증 사업 개시 (충남대동물병원, 광주 쿨펫동물병원 외)</p>
+          <p>훈련소 및 동물병원 B2B 실증 사업 개시 (동물병원·훈련소 다수)</p>
         </div>
       </div>
       <div class="timeline-item">
@@ -211,5 +220,21 @@
     <p>광주광역시 북구</p>
   </div>
 </footer>
+<script>
+const btn = document.getElementById("hamburger");
+const menu = document.getElementById("mobileMenu");
+if(btn && menu){
+  btn.addEventListener("click", () => {
+    btn.classList.toggle("open");
+    menu.classList.toggle("open");
+  });
+  document.querySelectorAll(".nav-mobile-menu a").forEach(a => {
+    a.addEventListener("click", () => {
+      btn.classList.remove("open");
+      menu.classList.remove("open");
+    });
+  });
+}
+</script>
 </body>
 </html>

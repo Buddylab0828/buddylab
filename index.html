@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BuddyLab — 데이터 기반 펫푸드 케어 플랫폼</title>
 <meta name="description" content="스마트 펫하우스 PAWSENSE 데이터로 반려동물 맞춤 기능성 간식을 추천하는 버디랩입니다.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <link rel="stylesheet" href="style.css">
 <style>
 /* ── HERO ── */
@@ -111,15 +110,25 @@
       <a href="news.html">뉴스·IR</a>
       <a href="contact.html" class="nav-cta">문의하기</a>
     </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="메뉴">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+<a href="about.html">회사 소개</a>
+      <a href="products.html">제품·서비스</a>
+      <a href="team.html">팀</a>
+      <a href="news.html">뉴스·IR</a>
+      <a href="contact.html" class="nav-cta">문의하기</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-label">데이터 기반 펫푸드 케어 플랫폼</div>
     <h1>반려동물의 하루를<br>데이터로 읽고<br><em>식이로 답합니다</em></h1>
-    <p class="hero-desc">PAWSENSE 스마트 펫하우스가 수집한 행동·환경·섭식 데이터로 개체별 최적 기능성 간식을 자동 추천합니다.</p>
+    <p class="hero-desc">PAWSENSE 스마트 펫하우스가 수집한 행동·환경·섭식 데이터를 분석해 우리 아이에게 딱 맞는 기능성 간식을 추천합니다.</p>
     <div class="hero-cta">
       <a href="products.html" class="btn btn-primary btn-lg">제품 보기</a>
       <a href="contact.html" class="btn btn-outline btn-lg" style="color:var(--white); border-color:rgba(255,255,255,.4);">문의하기</a>
@@ -152,7 +161,7 @@
       <span class="section-label">About BuddyLab</span>
       <h2>반려동물 맞춤 식이의<br>새로운 기준을 만듭니다</h2>
       <div class="divider"></div>
-      <p>현재 간식 선택은 보호자의 직감과 기호성에 의존합니다. 버디랩은 스마트 디바이스로 수집한 데이터를 기반으로 개체별 최적 식이를 설계하고, 이를 기능성 간식과 구독 서비스로 연결합니다.</p>
+      <p>지금 우리가 반려동물에게 주는 간식, 근거가 있을까요? 버디랩은 스마트 디바이스로 수집한 데이터를 기반으로 개체별 맞춤 식이를 설계하고, 기능성 간식과 구독 서비스로 연결합니다.</p>
       <ul class="intro-list">
         <li><div class="intro-check">✓</div><span>비접촉 레이더 센서 기반 반려동물 생체·행동 데이터 수집</span></li>
         <li><div class="intro-check">✓</div><span>AI 분석으로 개체별 맞춤 급여량 및 식이 성분 자동 설계</span></li>
@@ -160,36 +169,8 @@
       </ul>
       <a href="about.html" class="btn btn-outline mt-32">회사 소개 →</a>
     </div>
-    <div class="intro-visual">
-      <div class="intro-visual-title">How It Works</div>
-      <div class="flow-item">
-        <div class="flow-num">1</div>
-        <div>
-          <h4>데이터 수집</h4>
-          <p>PAWSENSE가 생활공간에서 행동·환경·섭식 데이터를 상시 수집</p>
-        </div>
-      </div>
-      <div class="flow-item">
-        <div class="flow-num">2</div>
-        <div>
-          <h4>AI 상태 분석</h4>
-          <p>체중·수면·활동 패턴을 통합 분석해 리포트 및 알림 제공</p>
-        </div>
-      </div>
-      <div class="flow-item">
-        <div class="flow-num">3</div>
-        <div>
-          <h4>맞춤 식이 추천</h4>
-          <p>데이터 기반으로 최적 간식 종류와 급여량 자동 추천</p>
-        </div>
-      </div>
-      <div class="flow-item">
-        <div class="flow-num">4</div>
-        <div>
-          <h4>구독 연결</h4>
-          <p>추천 결과가 정기 구독 배송으로 직접 연결</p>
-        </div>
-      </div>
+    <div class="intro-visual" style="padding:0; overflow:hidden; background:none; border-radius:var(--radius);">
+      <img src="images/pawsense_hero.jpg" alt="PAWSENSE 스마트 펫하우스와 기능성 간식" style="width:100%; height:100%; object-fit:cover; border-radius:var(--radius); display:block;">
     </div>
   </div>
 </section>
@@ -268,7 +249,7 @@
   <div class="cta-band-inner">
     <div>
       <h2>투자 및 협업 문의를<br>환영합니다</h2>
-      <p>반려동물 식이 케어의 새로운 기준을 함께 만들어갈 파트너를 찾습니다.</p>
+      <p>반려동물 식이 케어의 새로운 기준을 함께 만들어갈 파트너와 투자자를 환영합니다.</p>
     </div>
     <div>
       <a href="contact.html" class="btn btn-primary btn-lg">문의하기 →</a>
@@ -317,5 +298,21 @@
   </div>
 </footer>
 
+<script>
+const btn = document.getElementById("hamburger");
+const menu = document.getElementById("mobileMenu");
+if(btn && menu){
+  btn.addEventListener("click", () => {
+    btn.classList.toggle("open");
+    menu.classList.toggle("open");
+  });
+  document.querySelectorAll(".nav-mobile-menu a").forEach(a => {
+    a.addEventListener("click", () => {
+      btn.classList.remove("open");
+      menu.classList.remove("open");
+    });
+  });
+}
+</script>
 </body>
 </html>

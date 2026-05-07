@@ -4,8 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>팀 소개 — BuddyLab</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <link rel="stylesheet" href="style.css">
 <style>
 .team-hero { padding: 140px 6% 80px; background: var(--cream); }
@@ -63,15 +62,25 @@
       <a href="news.html">뉴스·IR</a>
       <a href="contact.html" class="nav-cta">문의하기</a>
     </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="메뉴">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+<a href="about.html">회사 소개</a>
+      <a href="products.html">제품·서비스</a>
+      <a href="team.html" class="active">팀</a>
+      <a href="news.html">뉴스·IR</a>
+      <a href="contact.html" class="nav-cta">문의하기</a>
+</div>
 
 <section class="team-hero">
   <div class="team-hero-inner">
     <span class="section-label">Team</span>
     <h1>현장을 아는 팀이<br>만드는 차이</h1>
     <div class="divider"></div>
-    <p style="font-size:18px; font-weight:300; max-width:560px;">동물 전문가와 식품 개발, 마케팅 전문인력이 한 팀으로 움직입니다.</p>
+    <p style="font-size:18px; font-weight:300; max-width:560px;">동물 전문가, 식품 개발, 마케팅 전문인력이 한 팀으로 움직입니다.</p>
   </div>
 </section>
 
@@ -100,7 +109,7 @@
       <div class="expertise-grid">
         <div class="expertise-item">
           <h4>동물 전문 역량</h4>
-          <p>동물훈련사 1급, 동물케어 자격 보유. 더펫하우스협동조합 현장 경험.</p>
+          <p>동물훈련사 1급, 동물케어 자격 보유. 반려동물 케어 현장 경험 다수.</p>
         </div>
         <div class="expertise-item">
           <h4>창업·브랜드 경험</h4>
@@ -184,5 +193,21 @@
   </div>
   <div class="footer-bottom"><p>© 2025 BuddyLab Co., Ltd. All rights reserved.</p><p>광주광역시 북구</p></div>
 </footer>
+<script>
+const btn = document.getElementById("hamburger");
+const menu = document.getElementById("mobileMenu");
+if(btn && menu){
+  btn.addEventListener("click", () => {
+    btn.classList.toggle("open");
+    menu.classList.toggle("open");
+  });
+  document.querySelectorAll(".nav-mobile-menu a").forEach(a => {
+    a.addEventListener("click", () => {
+      btn.classList.remove("open");
+      menu.classList.remove("open");
+    });
+  });
+}
+</script>
 </body>
 </html>
